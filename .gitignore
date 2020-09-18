@@ -1,0 +1,5 @@
+log/
+flask/**/__pycache__/
+flask/env/
+flask/sudo
+flask/uwsgi
