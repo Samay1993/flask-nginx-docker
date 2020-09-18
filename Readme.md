@@ -19,12 +19,12 @@ The nginx app is exposed at port *80*, which actually proxies all the requests t
 ## How to use
 
 Clone the project
-  * git@github.com:chandanky23/flask-nginx-docker.git (ssh)
-  * https://github.com/chandanky23/flask-nginx-docker.git (https)
+  * `git@github.com:chandanky23/flask-nginx-docker.git` (ssh)
+  * `https://github.com/chandanky23/flask-nginx-docker.git` (https)
 
 Once the project is downloaded with the default project name (flaskApp or your custome project name, say X) then,
 Run the following commands to build the image and start it:
 
-1 - `cd flaskApp(or your custom project name)` to go into your project
-2 - `docker-compose build` this may take a while when ran for the first time as it will pull the image to build the container, after that it will be super fast.
-3 - `docker-compose up` to run the container. This will execute both the images from flask and nginx and make it available to be used.
+* `cd flaskApp (or your custom project name)` to go into your project
+* `docker-compose build` this may take a while when ran for the first time as it will pull the image to build the container, after that it will be super fast.
+* `docker-compose up` to run the container. This will execute both the images from flask and nginx and make it available to be used.
