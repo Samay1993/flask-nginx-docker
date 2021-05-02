@@ -3,13 +3,9 @@ node {
         checkout scm
     }
 
-    stage(){
-
-    }
-
    
     stage('Deploy') {
-        sh 'sudo docker-compose build docker-compose.yml'
+        sh 'sudo docker-compose build'
         sh 'sudo docker-compose up -d'
     }
 }
