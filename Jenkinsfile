@@ -5,7 +5,9 @@ node {
     
     stage('Removing Old Containers') {
         //sh 'docker-compose build'
-       sh 'docker-compose down'
+        sh 'docker-compose ps'
+
+        sh 'docker-compose down'
     }
    
     stage('Deploy') {
