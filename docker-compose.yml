@@ -26,7 +26,7 @@ services:
     # Any ports listed using `expose` will only be accessible to internal network for other internal services
     # uWSGI will be serving our Flask application on port 8080
     expose:
-      - 8181
+      - 8080
     
     # Mount the container log directory to the local log directory
     # Consider changing this to /var/log/uwsgi:/var/uwsgi in production
@@ -47,7 +47,7 @@ services:
 
     # Any ports listed using `ports` will exposed to the outside world (i.e, HOST: CONTAINER)
     ports:
-      - "81:80"
+      - "80:80"
     
     # Mount the container log directory to the local log directory
     # Consider changing this to /var/log/uwsgi:/var/uwsgi in production
