@@ -14,7 +14,6 @@ node (Jenkins-Slave-Develop) {
 
         stage('Deploy') {
             //sh 'docker-compose build'
-           
         }
     
 }
