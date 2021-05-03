@@ -1,5 +1,5 @@
 node (Jenkins-Slave-Develop) {
-    try{
+    
         stage('Clone repository') {
             checkout scm
         }
@@ -16,11 +16,5 @@ node (Jenkins-Slave-Develop) {
             //sh 'docker-compose build'
            
         }
-     }
-     catch{
-
-     }
-     finally{
-
-     }
+    
 }
