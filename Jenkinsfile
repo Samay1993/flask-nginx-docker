@@ -1,4 +1,4 @@
-node (Jenkins-Slave-Develop) {
+node ("Jenkins-Slave-Develop") {
     
         stage('Clone repository') {
             checkout scm
@@ -9,6 +9,7 @@ node (Jenkins-Slave-Develop) {
             sh 'docker-compose ps'
 
             sh 'docker-compose down'
+            
             sh 'docker-compose build'
         }
 
