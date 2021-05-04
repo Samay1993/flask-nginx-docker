@@ -18,11 +18,16 @@ node ("Jenkins-Slave-Master") {
             sh 'docker-compose down'
         }
 
-       // stage('Removing Old Images') {
+        stage('Removing Old Images') {
             //sh 'docker-compose build'
-         //   sh 'docker rmi $(docker images -q)'
+            //sh 'docker rmi $(docker images -q)'
+            //sh 'docker container stop flask'
+            //sh 'docker container rm flask'
 
-        //}
+            //sh 'docker container stop nginx'
+            //sh 'docker container rm nginx'
+
+        }
 
         stage('Deploy') {
                         
