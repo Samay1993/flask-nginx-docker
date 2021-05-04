@@ -4,17 +4,19 @@ node ("Jenkins-Slave-Develop") {
             checkout scm
         }
 
-        stage('Building Application') {
+        stage('Removing Old Builds') {
             //sh 'docker-compose build'
             sh 'docker-compose ps'
 
             sh 'docker-compose down'
             
-            sh 'docker-compose build'
         }
 
         stage('Deploy') {
-            //sh 'docker-compose build'
+            sh 'docker-compose build'
+
+            sh 'docker-compose up -d'
+        
         }
     
 }
