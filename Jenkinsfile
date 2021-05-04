@@ -1,17 +1,24 @@
-node {
-    stage('Clone repository') {
-        checkout scm
-    }
+node ("Jenkins-Slave-Master") {
     
-    stage('Removing Old Containers') {
-        //sh 'docker-compose build'
-        sh 'docker-compose ps'
+        stage('Clone repository') {
+            checkout scm
+        }
 
-        sh 'docker-compose down'
-    }
-   
-    stage('Deploy') {
-        //sh 'docker-compose build'
-        sh 'docker-compose build'
-    }
+        stage('Removing old builds') {
+            //sh 'docker-compose build'
+            sh 'docker-compose ps'
+
+            sh 'docker-compose down'
+        }
+
+        stage('Deploy') {
+                        
+            sh 'docker-compose build'
+            
+            sh 'docker-compose up -d'
+            
+            sh 'docker-compose ps'
+
+        }
+    
 }
