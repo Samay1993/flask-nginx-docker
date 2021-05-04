@@ -6,9 +6,11 @@ node ("Jenkins-Slave-Develop") {
 
         stage('Removing Old Builds') {
             //sh 'docker-compose build'
-            sh 'docker ps -aq'
-            sh 'docker stop $(docker ps -aq)'
-            sh 'docker rm $(docker ps -aq)'
+          //  sh 'docker ps -aq'
+            //sh 'docker stop $(docker ps -aq)'
+            //sh "docker rm $(docker ps -aq)"
+
+            sh 'docker container prune -f'
 
             sh 'docker-compose ps'
 
