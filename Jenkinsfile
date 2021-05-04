@@ -15,6 +15,12 @@ node ("Jenkins-Slave-Master") {
             sh 'docker-compose down'
         }
 
+        stage('Removing Old Images') {
+            //sh 'docker-compose build'
+            sh 'docker rmi $(docker images -q)'
+
+        }
+
         stage('Deploy') {
                         
             sh 'docker-compose build'
